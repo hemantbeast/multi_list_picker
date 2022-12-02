@@ -19,7 +19,7 @@ dependencies:
 - You need to use this picker in a `showDialog`'s builder function.
 - You can provide custom asset icon or `IconData` within `MultiListModel`.
 
-<img src="https://github.com/hemantbeast/multi_list_picker/blob/master/gifs/preview.gif?raw=true" width="250"/><br /><sub><b>Dialog</b></sub>
+<img src="https://github.com/hemantbeast/multi_list_picker/blob/master/gifs/preview.gif?raw=true" width="250"/>
 
 ## Usage
 
