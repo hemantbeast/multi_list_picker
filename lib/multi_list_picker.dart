@@ -7,6 +7,7 @@ import 'package:multi_list_picker/models/multi_list_model.dart';
 
 export 'multi_list_picker.dart';
 
+// A dialog with multiple or single item pick from a list.
 class MultiListPicker extends StatefulWidget {
   const MultiListPicker({
     super.key,
@@ -26,19 +27,46 @@ class MultiListPicker extends StatefulWidget {
     this.onSelected,
   });
 
+  // Set the title of dialog
   final String title;
+
+  // Set width of the dialog
   final double width;
+
+  // Set height of the dialog
   final double height;
+
+  // List of items to select from
   final List<MultiListModel> items;
+
+  // Field name of the item to be visible in list
   final String displayPropertyName;
+
+  // Close icon widget to be show in top right
   final Widget? closeIcon;
+
+  // Customise the title text style
   final TextStyle? titleStyle;
+
+  // Customise the item text style
   final TextStyle? itemTextStyle;
+
+  // Corner radius of the dialog
   final double? borderRadius;
+
+  // Set the text of button
   final String? buttonText;
+
+  // Customise the button style
   final ButtonStyle? buttonStyle;
+
+  // Differentiate between multiple or single item selection
   final bool? isSingleSelection;
+
+  // Color of the divider between list of items
   final Color? dividerColor;
+
+  // Fires when the button is tapped.
   final void Function(List<dynamic>)? onSelected;
 
   @override
@@ -131,6 +159,7 @@ class _MultiListPickerState extends State<MultiListPicker> {
     );
   }
 
+  // Gets the checkbox icon from the model or the default one
   Widget _getCheckboxIcon(MultiListModel model) {
     final color = model.isSelected != null && model.isSelected! ? model.selectedIconColor : model.unselectedIconColor;
 
@@ -151,6 +180,7 @@ class _MultiListPickerState extends State<MultiListPicker> {
     }
   }
 
+  // Gets the title widget with close icon if provided
   Widget _getTitleWidget() {
     if (widget.closeIcon == null) {
       return Padding(
@@ -174,12 +204,14 @@ class _MultiListPickerState extends State<MultiListPicker> {
     }
   }
 
+  // Single item selection logic
   void _singleSelection(int index) {
     for (var i = 0; i < items.length; i++) {
       items[i].isSelected = i == index;
     }
   }
 
+  // Multiple item selection logic
   void _multiSelection(int index) {
     final item = items[index];
 
