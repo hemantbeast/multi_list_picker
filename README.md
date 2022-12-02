@@ -19,6 +19,8 @@ dependencies:
 - You need to use this picker in a `showDialog`'s builder function.
 - You can provide custom asset icon or `IconData` within `MultiListModel`.
 
+<img src="https://raw.githubusercontent.com/hemantbeast/multi_list_picker/master/gif/preview.gif" width="250"/><br /><sub><b>Dialog</b></sub>
+
 ## Usage
 
 #### Using list of `String` as items
