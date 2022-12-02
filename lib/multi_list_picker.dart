@@ -16,7 +16,7 @@ class MultiListPicker extends StatefulWidget {
     this.displayPropertyName = '',
     this.width = 320,
     this.height = 200,
-    this.borderRadius = 10,
+    this.dialogRadius = 10,
     this.buttonText = 'OK',
     this.isSingleSelection = false,
     this.dividerColor = const Color(0xFFF2F2F2),
@@ -52,7 +52,7 @@ class MultiListPicker extends StatefulWidget {
   final TextStyle? itemTextStyle;
 
   // Corner radius of the dialog
-  final double? borderRadius;
+  final double? dialogRadius;
 
   // Set the text of button
   final String? buttonText;
@@ -85,7 +85,7 @@ class _MultiListPickerState extends State<MultiListPicker> {
       contentPadding: EdgeInsets.zero,
       titlePadding: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(widget.borderRadius!),
+        borderRadius: BorderRadius.circular(widget.dialogRadius!),
       ),
       title: _getTitleWidget(),
       contentTextStyle: widget.itemTextStyle,
